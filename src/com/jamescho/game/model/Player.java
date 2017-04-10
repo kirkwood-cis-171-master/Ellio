@@ -37,13 +37,13 @@ public class Player {
 			isDucked = false;
 			duckDuration = .6f;
 		}
+		y += velY * delta;
 		if (!isGrounded()) {
 			velY += ACCEL_GRAVITY * delta;
 		} else {
 			y = 406 - height;
 			velY = 0;
 		}
-		y += velY * delta;
 		updateRects();
 	}
 
